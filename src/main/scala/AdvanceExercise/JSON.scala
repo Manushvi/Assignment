@@ -29,7 +29,7 @@ object JSON extends App with PersonJsonProtocol {
         val name = fields("name").convertTo[String]
         val age = fields("age").convertTo[Int]
         Person(name, age)
-      case _ => throw Exception
+      case _ => throw DeserializationException("Person expected")
     }
   }
   // Using JSON format to serialize and deserialize the Person case class
