@@ -31,8 +31,6 @@ object BinaryTree extends App{
   val tree = Node(9,Node(7,Node(5,Leaf,Leaf),Leaf),Node(2,Node(6,Node(1,Leaf,Leaf),Node(4,Leaf,Leaf)),Node(3,Node(8,Leaf ,Leaf),Node(10,Leaf,Leaf))))
 
   println("Height of the tree: " + height(tree)) // returns 4
-  println("No of leafCount: " + leafCount(tree)/2) // return 5
-  // here divide the leaf count by 2 because function returns the double count as it is returning the empty node not leaf node
+  println("No of leafCount: " + leafCount(tree)) // return 5
   PreorderTraversal(tree) // returns List(9,7,5,2,6,1,4,3,8,10)
-
 }
