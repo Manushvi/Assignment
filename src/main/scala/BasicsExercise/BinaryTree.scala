@@ -13,7 +13,8 @@ object BinaryTree extends App{
   }
   // function which calculate the leaf nodes
   def leafCount[T](tree: BinaryTree[T]): Int = tree match {
-    case Leaf => 1
+    case Leaf => 0
+    case Node(_,Leaf,Leaf) => 1
     case Node(_, left, right) => leafCount(left) + leafCount(right)
   }
 
